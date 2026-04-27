@@ -41,6 +41,7 @@ int ticket3(int i, int j) {
 }
 
 int ticket4(int i, int j) {
+	if (i != j) return INF;
 	int pi = i - 4, pj = j - 4;
 	pi = max(0, pi); pj = max(0, pj);
 	return dp[pi][pj] + pp;
@@ -57,6 +58,5 @@ int main() {
 	}
 
 	cout << dp[N][N] << "\n";
-
 	return 0;
 }
